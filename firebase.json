@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "dist/tour-of-thrones",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

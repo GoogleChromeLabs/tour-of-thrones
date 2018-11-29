@@ -1,0 +1,39 @@
+<!-- Copyright 2018 Google LLC
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+
+<app-modal (modalClose)="modalClose()">
+  <div modal-loader *ngIf="!house; else houseContent" class="loader-container">
+    <app-loader></app-loader>
+  </div>
+  <ng-template #houseContent modal-content>
+    <div class="container">
+      <h1>{{house.name}}</h1>
+      <div *ngIf="house.words !== ''" class="subheading">{{house.words}}</div>
+      <div class="info" [ngClass]="(house.words === '') ? 'info-large-margin' : 'info-small-margin'">
+        <div class="detail">
+          <p class="caption">Coat of Arms</p>
+          <p class="body">{{house.coatOfArms === '' ? '?' : house.coatOfArms}}</p>
+        </div>
+        <div class="detail">
+          <p class="caption">Region</p>
+          <p class="body">{{house.region === '' ? '?' : house.region}}</p>
+        </div>
+        <div class="detail">
+          <p class="caption">Founded</p>
+          <p class="body">{{house.founded === '' ? '?' : house.founded}}</p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</app-modal>

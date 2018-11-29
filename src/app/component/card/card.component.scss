@@ -1,0 +1,59 @@
+.card {
+  padding: 20px;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    box-shadow: 0 0 40px #ffff00 !important;
+
+    h3 {
+      color: #ffff00;
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+    }
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    transition: -webkit-transform 0.25s ease-out;
+    transition: transform 0.25s ease-out;
+    transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+
+    @media (max-width: 899px) {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.grow {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+
+  &:hover {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+}
